@@ -1,9 +1,13 @@
 #!/usr/bin/env groovy
 
-node {
-    echo 'Helloworld'
-
-    stage('stage1') {
-        echo 'Stage 1'
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                echo 'Step 1'
+                echo 'Step 2'
+            }
+        }
     }
 }
